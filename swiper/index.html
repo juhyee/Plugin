@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- meta, title, link, script, style 순으로 정렬 -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="swiper 슬라이더 다양한 메소드와 설정, demo, 자세한 api 문서를 지원하고 있어
+  쉽게 습득하고 사용하기 편리하다.  swiper은 이미 많은 곳에서 사용되어 대중화 되었기 때문에 많은 커뮤니티를 확보하고 있다.">
+  <title>swiper slide_plugin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="../reset.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+
+<body>
+
+  <div class="wrap">
+
+    <div class="header">
+      <ul class="menu">
+        <li class="on"><a href="#Default">swiper-Default</a></li>
+        <li><a href="#Navigation">swiper-Navigation</a></li>
+        <li><a href="#Pagination">swiper-Pagination</a></li>
+        <li><a href="#Fraction">swiper-Fraction</a></li>
+        <li><a href="#Scrollbar">swiper-Scrollbar</a></li>
+        <li><a href="#Progress">swiper-Progress</a></li>
+        <li><a href="#Grid">swiper-Grid</a></li>
+      </ul>
+    </div>
+
+    <!-- swiper-Default -->
+    <div class="item" id="Default">
+      <div class="item-info">
+        <div class="item-tit">
+          <p>swiper-Default</p>
+          <div class="btn-group">
+            <a href="#" class="btn auto">Autoplay</a>
+            <a href="#" class="btn fade">Effect fade</a>
+          </div>
+        </div>
+        <div class="desc_box">
+          <code>
+            autoplay: {
+              delay: 2500,
+              disableOnInteraction: false,
+            },
+          </code>
+        </div>
+      </div>
+      <div class="swiper swiper-Default">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+        </div>
+      </div>
+    </div>
+    <!-- //swiper-Default -->
+
+
+    <!-- swiper-Navigation -->
+    <div class="item" id="Navigation">
+      <div class="item-info">
+        <div class="item-tit">
+          <p>swiper-Navigation</p>
+          <div class="btn-group">
+            <a href="#" class="btn between">Space between</a>
+            <a href="#" class="btn per">Slides per view</a>
+          </div>
+        </div>
+        <div class="desc_box">
+          <code>
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+          </code>
+        </div>
+      </div>
+      <div class="swiper swiper-Navigation">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+    <!-- //swiper-Navigation -->
+
+
+    <!-- swiper-Pagination -->
+    <div class="item" id="Pagination">
+      <div class="item-info">
+        <div class="item-tit">
+          <p>swiper-Pagination</p>
+          <div class="btn-group">
+            <a href="#" class="btn vertical">Vertical</a>
+          </div>
+        </div>
+        <div class="desc_box">
+          <code>
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+          </code>
+        </div>
+      </div>
+      <div class="swiper swiper-Pagination">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <!-- //swiper-Pagination -->
+
+
+    <!-- swiper-Fraction -->
+    <div class="item" id="Fraction">
+      <div class="item-info">
+        <div class="item-tit">
+          <p>swiper-Fraction</p>
+        </div>
+      </div>
+      <div class="swiper swiper-Fraction">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <!-- //swiper-Fraction -->
+
+
+    <!-- swiper-Scrollbar -->
+    <div class="item" id="Scrollbar">
+      <div class="item-info">
+        <div class="item-tit">
+          <p>swiper-Scrollbar</p>
+        </div>
+      </div>
+      <div class="swiper swiper-Scrollbar">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+        </div>
+        <div class="swiper-scrollbar"></div>
+      </div>
+    </div>
+    <!-- swiper-Scrollbar -->
+
+
+    <!-- swiper-Progress -->
+    <div class="item" id="Progress">
+      <div class="item-info">
+        <div class="item-tit">
+          <p>swiper-Progress</p>
+        </div>
+      </div>
+      <div class="swiper swiper-Progress">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <!-- swiper-Progress -->
+
+
+    <!-- swiper-Grid -->
+    <div class="item" id="Grid">
+      <div class="item-info">
+        <div class="item-tit">
+          <p>swiper-Grid</p>
+        </div>
+
+      </div>
+      <div class="swiper swiper-Grid">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+          <div class="swiper-slide">Slide 4</div>
+          <div class="swiper-slide">Slide 5</div>
+          <div class="swiper-slide">Slide 6</div>
+          <div class="swiper-slide">Slide 7</div>
+          <div class="swiper-slide">Slide 8</div>
+          <div class="swiper-slide">Slide 9</div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <!-- swiper-Grid -->
+
+    <div class="popup">
+
+    </div>
+  </div>
+  <!-- //wrap -->
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="./menu.js"></script>
+  <script src="./scirpt.js"></script>
+</body>
+
+</html>
