@@ -149,10 +149,16 @@ body {
   object-fit: cover;
 }
 
+
+.swiper-pagination-fraction {
+  font-size:16px;
+}
+
+/* Progressbar */
 .swiper-horizontal>.swiper-pagination-progressbar, .swiper-pagination-progressbar {
   width:100% !important;
 }
-
+/* Progressbar */
 
 /* Grid */
 .swiper-Grid .swiper-slide {
