@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="풀페이지로 페이지 단위로 제작할때 유용하게 사용중인 fullpage.js 라이브러리입니다.
+  하지만 2.9.7버전 이후로 3버전 이상부터는 유료버전으로 전환되어 버전 3을 사용하기 위해서는 라이센스키가 필요하다.
+  section 마다 다양한 옵션을 사용할 수 있어 유용하게 사용할 수 있다.">
+  <title>fullpage_plugin</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.css">
+  <link rel="stylesheet" href="../reset.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+  <body>
+
+
+    <!-- wrap -->
+    <div id="fullpage" class="wrap">
+      <div class="section">Some section01</div>
+      <div class="section">Some section02</div>
+      <div class="section">Some section03</div>
+      <div class="section">Some section04</div>
+    </div>
+    <!-- //wrap -->
+
+    <!-- 아래는 선택사항입니다. css3:false 옵션을 쓰시면서 "linear", "swing" 또는 "easeInOutCubic" 대신 다른 전환(easing) 효과를 원하시는 경우에만 필요합니다. -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/vendors/jquery.easings.min.js"></script>
+    <!-- 아래 선은 `scrollOverflow:true` 옵션을 쓰시는 경우에만 넣으셔야 합니다. -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/vendors/scrolloverflow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.js"></script>
+    <script src="./scirpt.js"></script>
+  </body>
+</html>
