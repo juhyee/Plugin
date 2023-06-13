@@ -232,3 +232,5 @@ var swiperGrid = new Swiper(".swiper-Grid", {
   },
 });
 /* //swiper-Grid */
+
+includeHTML();
