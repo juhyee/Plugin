@@ -1,14 +1,14 @@
 $(document).ready(function() {
 	$('#fullpage').fullpage({
   //이동
-  menu: '#menu',
+  menu: '#menu',  // (기본값 false) 선택자를 써서 구역에 링크할 메뉴를 구체적으로 정할 수 있습니다.
   lockAnchors: false,
-  anchors:['firstPage', 'secondPage'],
-  navigation: true,
-  navigationPosition: 'right',
-  navigationTooltips: ['firstSlide', 'secondSlide'],
-  showActiveTooltip: false,
-  slidesNavigation: false,
+  anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
+  navigation: true, // (기본값 false) true로 설정되면 작은 원으로 이루어진 이동 막대기가 나타납니다.
+  navigationPosition: 'right', // (기본값 none) left나 right로 설정될 수 있습니다. (만약 쓰실 경우) 이동 막대기가 보여지는 위치를 정의합니다.
+  navigationTooltips: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage'], // (기본값 false) 수직으로 이동할때 능동적 구역 보기를 위해 계속 따라다니는 말풍선 위젯을 보여줍니다.
+  showActiveTooltip: true,
+  slidesNavigation: true, // (기본값 false) true로 설정되면 웹사이트에서 각 수평방향 슬라이더마다 작은 원으로 이루어진 이동 막대기를 보여줍니다.
   slidesNavPosition: 'bottom',
 
   //스크롤
@@ -46,7 +46,7 @@ $(document).ready(function() {
   //디자인
   controlArrows: true,
   verticalCentered: true,
-  sectionsColor : ['#ccc', '#fff'],
+  // sectionsColor : ['#ccc', '#fff'],
   paddingTop: '3em',
   paddingBottom: '10px',
   fixedElements: '#header, .footer',
@@ -75,3 +75,26 @@ $(document).ready(function() {
   onSlideLeave: function(section, origin, destination, direction){}
   });
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+
+    let modalP = document.querySelector('.popup_modal')
+
+    document.querySelector('.popup_btn').addEventListener('click', function(event){
+      event.preventDefault();
+      modalP.classList.add('on')
+      document.querySelector('html').classList.add('not_scroll')
+    })
+
+    document.querySelector('.modal_head > .close_btn').addEventListener('click', function(event){
+      event.preventDefault();
+      modalP.classList.remove('on')
+      document.querySelector('html').classList.remove('not_scroll')
+    })
+
+
+});
+
+
+includeHTML();
