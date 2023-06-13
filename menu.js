@@ -20,7 +20,7 @@ function List(items){
   });
 
 
-  let close_btn = document.querySelector('.close_btn')
+  let close_btn = document.querySelector('.aside .close_btn')
 
   close_btn.addEventListener('click', function(){
       close_btn.parentNode.parentNode.classList.toggle('on')

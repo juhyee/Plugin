@@ -2,14 +2,16 @@
   z-index:101;
   position:fixed;
   top: 0;
-  left:-260px;
+  left:0;
   display: inline-flex;
   height:100%;
   padding:60px 30px;
   background-color:#e2e2e2;
+  transform: translateX(-260px);
+  transition: all 0.5s;
 }
 
-.close_btn {
+.aside .close_btn {
   position:absolute;
   top: 60px;
   right: -24px;
@@ -17,6 +19,7 @@
   height:57px;
   background:url(/img/layerCloseIcon.svg) no-repeat center;
   transform: rotate(-180deg);
+  transition: all 0.3s;
 }
 
 .aside_title {
@@ -52,7 +55,7 @@
 }
 
 .aside.on {
-  left: 0;
+  transform: translateX(0);
 }
 
 
