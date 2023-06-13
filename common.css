@@ -26,6 +26,8 @@
 }
 
 .gnb_list {
+  overflow-y: auto;
+  max-height:calc(100vh - 186px);
   border-radius:16px;
   background-color:#fff;
 }
