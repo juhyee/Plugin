@@ -88,7 +88,7 @@ function modalE() {
     document.querySelector('html').classList.add('not_scroll')
   })
 
-  document.querySelector('.close_btn').addEventListener('click', function(event){
+  document.querySelector('.modal_head > .close_btn').addEventListener('click', function(event){
     event.preventDefault();
     modalP.classList.remove('on')
     document.querySelector('html').classList.remove('not_scroll')
