@@ -31,7 +31,7 @@ $(document).ready(function() {
   offsetSections: false,
   resetSliders: false,
   fadingEffect: false,
-  normalScrollElements: '.popup_modal',
+  normalScrollElements: '.popup_modal, #aside',
   scrollOverflow: false,
   scrollOverflowReset: false,
   scrollOverflowOptions: null,
