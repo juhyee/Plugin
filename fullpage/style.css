@@ -118,60 +118,26 @@ body.not_scroll {overflow: hidden !important;height: 100% !important; margin: 0 
 
 .modal_body {
   overflow-y: auto;
+  display:flex;
+  justify-content:center;
+  align-items: center;
   height:600px;
-  max-height: 600px;
-  margin-bottom: 40px;
-  margin-right:10px;
-  padding: 20px 20px 0 40px;
-  word-break: keep-all;
+
 }
 
-.modal_body::-webkit-scrollbar {
-  width: 6px;
-  height: 4px;
-}
-.modal_body::-webkit-scrollbar-thumb {
-  height: 10%; /* 스크롤바의 길이 */
-  background: rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
-}
-.modal_body::-webkit-scrollbar-track {
-  background: transparent; /*스크롤바 뒷 배경 색상*/
-}
 
-.modal_body ul li {
-  margin-bottom: 30px;
-}
-
-.item_tit {
-  margin-bottom:10px;
-  font-size: 16px;
-  line-height:20px;
-}
-
-.item_tit + p{
-padding:20px 30px;
-border-radius:15px;
-background-color:#ececec;
-line-height:20px;
-}
-
-.item_tit + span {
+.modal_body > span {
   display:block;
+  width:80%;
   margin-bottom:30px;
-  padding:20px 30px;
-  border-radius:15px;
-  background-color:#ffe9c7;
-  line-height:20px;
+  padding:20px 0;
+  border-radius:16px;
+  background-color:#c4c8ff;
+  font-size:12px;
+  text-align:center;
 }
-.variable_list>.item_tit,
-.method_list>.item_tit {
-  margin:60px 0 20px;
-  padding-top:40px;
-  border-top:1px solid #c2c2c2;
-  font-size:20px;
-  font-weight:700;
-}
+
+
 .filter {
   position: fixed;
   left: 0;
