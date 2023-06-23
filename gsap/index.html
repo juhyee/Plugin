@@ -24,18 +24,72 @@
   <div class="wrap">
     <aside include-html="/list.html" class="aside" id="aside"></aside>
 
-    <div class="text_area">
-      <p>
-        Law enforcement officials are monitoring online threats and potential gatherings of far-right extremists and
-        <span>marshaling more officers</span>
-      </p>
+
+    <div class="ani_wrap ani01">
+      <h2>gsap basic</h2>
+      <p>gsap.to()</p>
+      <span>
+        움직임의 끝나는 점을 지정하는 애니메이션입니다.<br>
+        gsap에서 가장 기본적으로 사용되는 속성으로 .to()는 일반적으로 .animate() 라고 생각하면 이해가 쉽습니다.<br>
+        Target 요소 속성에서 지정한 속성까지 애니메이션 됩니다.<br>
+        gsap.to("타겟", {속성: 속성값, ....});
+      </span>
+      <div class="box pink">to</div>
+      <p>gsap.from()</p>
+      <span>
+        시작 점을 지정하는 애니메이션입니다.<br>
+        to와 정반대로 시작 값을 정하고 원래대로 되돌아오는 애니메이션이 실행됩니다.<br>
+        gsap.from("타겟", {속성: 속성값, ....});
+      </span>
+      <div class="box orange">from</div>
+      <p>gsap.fromTo()</p>
+      <span>
+        시작 점과 끝나는 점을 지정하는 애니메이션입니다.<br>
+        from 속성이 시작 값으로 세팅되고 to 속성이 종료 값으로 세팅되어 애니메이션 효과가 적용됩니다.<br>
+        gsap.fromTo("타겟", {시작 속성: 시작 속성값, ....},{끝나는 속성: 끝나는 속성값, ....});
+      </span>
+      <div class="box green">fromTo</div>
+    </div>
+
+    <div class="ani_wrap ani02">
+      <p>gsap.set()</p>
+      <span>
+        요소에 속성 값을 미리 설정합니다.<br>
+        애니메이션 효과 없이 즉시 변경됩니다.<br>
+        gsap.set("타겟", {속성: 속성값, ....});
+      </span>
+      <div class="box orange">to</div>
+
+
+      <p>gsap.timeline()</p>
+      <span>
+        연속적인 애니메이션을 간편하게 설정 할 수 있습니다.<br>
+        gsap.timeline("타겟", {속성: 속성값, ....});
+      </span>
+      <div class="box green">to</div>
+
+
+
+      <p>gsap.play() / .pause() / resume() / reverse() / restart()</p>
+      <span>
+        특정한 요소의 애니메이션을 멈추거나 재실행하는 등의 컨트롤도 가능합니다.<br>
+        gsap.timeline("타겟", {속성: 속성값, ....});
+      </span>
+      <div class="box pink"></div>
+      <div class="nav light">
+      <button id="play">play()</button>
+      <button id="pause">pause()</button>
+      <button id="resume">resume()</button>
+      <button id="reverse">reverse()</button>
+      <button id="restart">restart()</button>
+
     </div>
   </div>
   <!-- //wrap -->
 
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script> -->
   <script src="./scirpt.js"></script>
   <script src="/menu.js"></script>
 </body>
