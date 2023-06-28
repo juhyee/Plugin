@@ -77,18 +77,70 @@
       </span>
       <div class="box pink"></div>
       <div class="nav light">
-      <button id="play">play()</button>
-      <button id="pause">pause()</button>
-      <button id="resume">resume()</button>
-      <button id="reverse">reverse()</button>
-      <button id="restart">restart()</button>
-
+        <button id="play">play()</button>
+        <button id="pause">pause()</button>
+        <button id="resume">resume()</button>
+        <button id="reverse">reverse()</button>
+        <button id="restart">restart()</button>
+      </div>
     </div>
-  </div>
+
+    <div class="ani_wrap ani03">
+      <p>gsap.registerPlugin(MotionPathPlugin);</p>
+      <span>
+        path를 활용하여 애니메이션을 제작할때 사용<br>
+        motionPath:{<br>
+          path: "#path",<br>
+          align: "#path",<br>
+          autoRotate: true,<br>
+          alignOrigin: [0.5, 0.5]<br>
+        }
+      </span>
+      <div class="circle pink"></div>
+      <svg width="701" height="96" viewBox="0 0 701 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path id="path" d="M1 52C50.3333 13.6667 181.2 -40 310 52C438.8 144 623.667 67 700 17" stroke="#000"/>
+      </svg>
+    </div>
+    <hr>
+    <div class="ani_wrap ani04">
+      <div class="box orange"></div>
+    </div>
+
+
+    <!-- 롯데면세점 -->
+    <div class="ani_wrap ani05">
+      <div class="_card_set">
+        <div class="_card _card_1"><a href="#_evtContent_1">
+          <img src="https://static.lottedfs.com/contents/images/ckeditor-img/20220808/20220808095511171a939d9cc046e41769695393d14839c84.png" alt=""></a>
+        </div>
+        <div class="_card _card_2"><a href="#_evtContent_2">
+          <img src="https://static.lottedfs.com/contents/images/ckeditor-img/20220808/202208080955312273203e28840144ae2bbe2b4e057651afa.png" alt=""></a>
+        </div>
+        <div class="_card _card_3"><a href="#_evtContent_3">
+          <img src="https://static.lottedfs.com/contents/images/ckeditor-img/20220808/202208080955392473a08226098b9434197ad31568c046fce.png" alt=""></a>
+        </div>
+        <div class="_card _card_4"><a href="#_evtContent_4">
+          <img src="https://static.lottedfs.com/contents/images/ckeditor-img/20220808/20220808095547171a1dd880e63d6479bb4cfba450ed2f400.png" alt=""></a>
+        </div>
+        <div class="_card _card_5"><a href="#_evtContent_5">
+          <img src="https://static.lottedfs.com/contents/images/ckeditor-img/20220808/20220808095554759b22aa1d683904e8a97ed5e960a1ed04c.png" alt=""></a>
+        </div>
+        <div class="_card _card_6"><a href="#_evtContent_6">
+          <img src="https://static.lottedfs.com/contents/images/ckeditor-img/20220808/202208080956024967a81c90348924c63bdce0b9808067b97.png" alt=""></a>
+        </div>
+        <div class="_card _card_7"><a href="#_evtContent_7">
+          <img src="https://static.lottedfs.com/contents/images/ckeditor-img/20220808/20220808095609727fe29ed4281354e5db5163ca8859306ce.png" alt=""></a>
+        </div>
+      </div>
+    </div>
+    <!-- 롯데면세점 -->
+</div>
   <!-- //wrap -->
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+  <!-- path를 활용하여 애니메이션을 제작할때 사용 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/MotionPathPlugin.min.js"></script>
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script> -->
   <script src="./scirpt.js"></script>
   <script src="/menu.js"></script>
