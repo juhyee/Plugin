@@ -11,6 +11,9 @@
   GSAP은 많은 프론트엔드 개발자들에게 각광받는 라이브러리라고 할 수 있다.">
   <title>gsap_plugin</title>
   <script src="/js/includeHTML.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
   <link rel="stylesheet" href="../reset.css">
   <link rel="stylesheet" href="./style.css">
@@ -26,7 +29,8 @@
 
 
     <div class="ani_wrap ani01">
-      <h2>gsap basic</h2>
+
+
       <p>gsap.to()</p>
       <span>
         움직임의 끝나는 점을 지정하는 애니메이션입니다.<br>
@@ -34,21 +38,29 @@
         Target 요소 속성에서 지정한 속성까지 애니메이션 됩니다.<br>
         gsap.to("타겟", {속성: 속성값, ....});
       </span>
-      <div class="box pink">to</div>
+      <div class="box_wrap">
+        <div class="box pink">to</div>
+      </div>
+
       <p>gsap.from()</p>
       <span>
         시작 점을 지정하는 애니메이션입니다.<br>
         to와 정반대로 시작 값을 정하고 원래대로 되돌아오는 애니메이션이 실행됩니다.<br>
         gsap.from("타겟", {속성: 속성값, ....});
       </span>
-      <div class="box orange">from</div>
+      <div class="box_wrap">
+        <div class="box orange">from</div>
+      </div>
+
       <p>gsap.fromTo()</p>
       <span>
         시작 점과 끝나는 점을 지정하는 애니메이션입니다.<br>
         from 속성이 시작 값으로 세팅되고 to 속성이 종료 값으로 세팅되어 애니메이션 효과가 적용됩니다.<br>
         gsap.fromTo("타겟", {시작 속성: 시작 속성값, ....},{끝나는 속성: 끝나는 속성값, ....});
       </span>
-      <div class="box green">fromTo</div>
+      <div class="box_wrap">
+        <div class="box green">fromTo</div>
+      </div>
     </div>
 
     <div class="ani_wrap ani02">
@@ -58,16 +70,20 @@
         애니메이션 효과 없이 즉시 변경됩니다.<br>
         gsap.set("타겟", {속성: 속성값, ....});
       </span>
-      <div class="box orange">to</div>
 
+      <div class="box_wrap ">
+        <div class="box orange">to</div>
+      </div>
 
       <p>gsap.timeline()</p>
       <span>
         연속적인 애니메이션을 간편하게 설정 할 수 있습니다.<br>
         gsap.timeline("타겟", {속성: 속성값, ....});
       </span>
-      <div class="box green">to</div>
 
+      <div class="box_wrap timeline">
+        <div class="box green">to</div>
+      </div>
 
 
       <p>gsap.play() / .pause() / resume() / reverse() / restart()</p>
@@ -75,13 +91,16 @@
         특정한 요소의 애니메이션을 멈추거나 재실행하는 등의 컨트롤도 가능합니다.<br>
         gsap.timeline("타겟", {속성: 속성값, ....});
       </span>
-      <div class="box pink"></div>
-      <div class="nav light">
-        <button id="play">play()</button>
-        <button id="pause">pause()</button>
-        <button id="resume">resume()</button>
-        <button id="reverse">reverse()</button>
-        <button id="restart">restart()</button>
+
+      <div class="box_wrap">
+        <div class="box pink"></div>
+        <div class="nav light">
+          <button id="play">play()</button>
+          <button id="pause">pause()</button>
+          <button id="resume">resume()</button>
+          <button id="reverse">reverse()</button>
+          <button id="restart">restart()</button>
+        </div>
       </div>
     </div>
 
@@ -96,19 +115,26 @@
           alignOrigin: [0.5, 0.5]<br>
         }
       </span>
-      <div class="circle pink"></div>
-      <svg width="701" height="96" viewBox="0 0 701 96" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path id="path" d="M1 52C50.3333 13.6667 181.2 -40 310 52C438.8 144 623.667 67 700 17" stroke="#000"/>
-      </svg>
+
+      <div class="box_wrap">
+        <div class="circle pink"></div>
+        <svg width="701" height="96" viewBox="0 0 701 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path id="path" d="M1 52C50.3333 13.6667 181.2 -40 310 52C438.8 144 623.667 67 700 17" stroke="#000"/>
+        </svg>
+      </div>
     </div>
-    <hr>
+
+
     <div class="ani_wrap ani04">
-      <div class="box orange"></div>
+      <div class="box_wrap">
+        <div class="box orange"></div>
+      </div>
     </div>
 
 
     <!-- 롯데면세점 -->
     <div class="ani_wrap ani05">
+      <p>롯데면세점 예제</p>
       <div class="_card_set">
         <div class="_card _card_1"><a href="#_evtContent_1">
           <img src="https://static.lottedfs.com/contents/images/ckeditor-img/20220808/20220808095511171a939d9cc046e41769695393d14839c84.png" alt=""></a>
