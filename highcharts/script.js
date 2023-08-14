@@ -1,77 +1,89 @@
-Highcharts.chart('container', {
+window.onload = function(){
+    /* 모든 차트에 대해서 동일한 옵션 적용을 위해서 setOptions를 사용한다. */
+     Highcharts.setOptions({
+         chart: {
+             type:'line',
+             backgroundColor: {
+                 linearGradient: [0, 0, 500, 500],
+                 stops: [
+                     [0, 'rgb(255, 255, 255)'],
+                     [1, 'rgb(200, 200, 2000)']
+                     ]
+             },
+             borderWidth: 2,
+             plotBackgroundColor: 'rgba(255, 255, 255, .9)',
+             plotShadow: true,
+             plotBorderWidth: 1
+         }
+     });
 
-  title: {
-      text: 'U.S Solar Employment Growth by Job Category, 2010-2020',
-      align: 'left'
-  },
+    /* char1, char2 로 개별적으로 차트를 줄수 있다. */
+    /* chart type은 chart, series안에서도 각각 줄수가 있다. */
+    var test01 = function drawChart() {
+        var basic = new Highcharts.Chart({
+        chart: {
+             renderTo: 'basic',
+             type: 'line'
 
-  subtitle: {
-      text: 'Source: <a href="https://irecusa.org/programs/solar-jobs-census/" target="_blank">IREC</a>',
-      align: 'left'
-  },
+         },
 
-  yAxis: {
-      title: {
-          text: 'Number of Employees'
-      }
-  },
+         xAxis: {
+             type: 'datetime'
+         },
 
-  xAxis: {
-      accessibility: {
-          rangeDescription: 'Range: 2010 to 2020'
-      }
-  },
+         series: [{
+             name: 'test1',
+             type: 'column',
+             data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0,
+                    135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
+             pointStart: Date.UTC(2010, 0, 1),
+             pointInterval: 3600 * 1000  // one hour
+         }
+         ,
+         {
+             name: 'test22',
+             data: [39.9, 41.5, 116.4, 119.2, 164.0, 156.0,
+                    125.6, 138.5, 206.4, 124.1, 195.6, 154.4],
+             pointStart: Date.UTC(2010, 0, 1),
+             pointInterval: 3600 * 1000  // one hour
+         }
+         ]
+        })
+     }
+     test01();  //default
 
-  legend: {
-      layout: 'vertical',
-      align: 'right',
-      verticalAlign: 'middle'
-  },
+     /* 인스턴스가 형성될때, 하나의 아이디에 2개의 인스턴스가 들어가면 마지막 인스턴스가 적용된다. */
+    var test02 = function drawChart02() {
+     var data = new Highcharts.Chart({
+         chart: {
+             renderTo: 'data',
+             type: 'bar'
 
-  plotOptions: {
-      series: {
-          label: {
-              connectorAllowed: false
-          },
-          pointStart: 2010
-      }
-  },
+         },
 
-  series: [{
-      name: 'Installation & Developers',
-      data: [43934, 48656, 65165, 81827, 112143, 142383,
-          171533, 165174, 155157, 161454, 154610]
-  }, {
-      name: 'Manufacturing',
-      data: [24916, 37941, 29742, 29851, 32490, 30282,
-          38121, 36885, 33726, 34243, 31050]
-  }, {
-      name: 'Sales & Distribution',
-      data: [11744, 30000, 16005, 19771, 20185, 24377,
-          32147, 30912, 29243, 29213, 25663]
-  }, {
-      name: 'Operations & Maintenance',
-      data: [null, null, null, null, null, null, null,
-          null, 11164, 11218, 10077]
-  }, {
-      name: 'Other',
-      data: [21908, 5548, 8105, 11248, 8989, 11816, 18274,
-          17300, 13053, 11906, 10073]
-  }],
+         xAxis: {
+             type: 'datetime'
+         },
 
-  responsive: {
-      rules: [{
-          condition: {
-              maxWidth: 500
-          },
-          chartOptions: {
-              legend: {
-                  layout: 'horizontal',
-                  align: 'center',
-                  verticalAlign: 'bottom'
-              }
-          }
-      }]
-  }
+         series: [{
+             data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0,
+                    135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
+             pointStart: Date.UTC(2010, 0, 1),
+             pointInterval: 3600 * 1000  // one hour
+         }]
+     });
+    };
 
-});
+
+     document.querySelector('.basic').addEventListener('click', function(e){
+        e.preventDefault();
+        document.querySelector('.chartContainer').id = 'basic'
+        test01();
+     })
+
+     document.querySelector('.data').addEventListener('click', function(e){
+        e.preventDefault();
+        document.querySelector('.chartContainer').id = 'data'
+        test02();
+     })
+};
