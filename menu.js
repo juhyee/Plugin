@@ -1,5 +1,5 @@
 function loadItem(){
-  return fetch("/js/list.json")
+  return fetch("../js/list.json")
   .then((res) => res.json())
   .then((json => json.listItem))
 }

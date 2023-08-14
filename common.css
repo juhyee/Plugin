@@ -17,7 +17,7 @@
   right: -24px;
   width:24px;
   height:57px;
-  background:url(/img/layerCloseIcon.svg) no-repeat center;
+  background:url(./img/layerCloseIcon.svg) no-repeat center;
   transform: rotate(-180deg);
   transition: all 0.3s;
 }
