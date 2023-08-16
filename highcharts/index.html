@@ -5,58 +5,84 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <title>highcharts slide_plugin</title>
-  <link rel="stylesheet" href="./style.css">
+  <title>highcharts_plugin</title>
+  <script src="../js/includeHTML.js"></script>
   <link rel="stylesheet" href="../reset.css">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="../common.css">
 
 </head>
 <body>
-  <div class="item" id="Default">
-    <div class="item-info">
-      <div class="item-tit">
-        <p>line chart</p>
-        <div class="btn-group">
-          <a href="#" class="btn basic">Basic line</a>
-          <a href="#" class="btn data">data label</a>
+
+  <div class="wrap">
+    <aside include-html="../list.html" id="aside" class="aside"></aside>
+
+    <div class="item" id="chartLine">
+      <div class="item-info">
+        <div class="item-tit">
+          <p>line chart</p>
+          <div class="btn-group">
+            <a href="#" class="btn basicLine">Basic line</a>
+            <a href="#" class="btn dataLine">Data label</a>
+          </div>
         </div>
       </div>
+      <figure class="highcharts-figure">
+        <div class="chartContainer chartContainerLine" id="basicL"></div>
+        <p class="highcharts-description">
+            Basic line chart showing trends in a dataset. This chart includes the
+            series-label module, which adds a label to each line for
+            enhanced readability.
+        </p>
+      </figure>
     </div>
-    <figure class="highcharts-figure">
-      <div class="chartContainer" id="basic"></div>
-      <p class="highcharts-description">
-          Basic line chart showing trends in a dataset. This chart includes the
-          <code>series-label</code> module, which adds a label to each line for
-          enhanced readability.
-      </p>
-    </figure>
-  </div>
 
 
-  <div class="item" id="Default">
-    <div class="item-info">
-      <div class="item-tit">
-        <p>Area chart</p>
-        <div class="btn-group">
-          <a href="#" class="btn auto">Basic</a>
-          <a href="#" class="btn fade">Percentage</a>
-          <a href="#" class="btn inverted">Inverted</a>
+    <div class="item" id="chartArea">
+      <div class="item-info">
+        <div class="item-tit">
+          <p>Area chart</p>
+          <div class="btn-group">
+            <a href="#" class="btn basicArea">Basic area</a>
+            <a href="#" class="btn percentageArea">Percentage</a>
+          </div>
         </div>
       </div>
+      <figure class="highcharts-figure">
+        <div class="chartContainer chartContainerArea" id="basicA"></div>
+        <p class="highcharts-description">
+          Demonstrating a basic area chart, also known as a mountain chart. Area charts are similar to line charts, but commonly used to visualize volumes.
+        </p>
+      </figure>
     </div>
-    <figure class="highcharts-figure">
-      <div id="data"></div>
-      <p class="highcharts-description">
-          Basic line chart showing trends in a dataset. This chart includes the
-          <code>series-label</code> module, which adds a label to each line for
-          enhanced readability.
-      </p>
-    </figure>
-  </div>
 
 
+    <div class="item" id="chartBar">
+      <div class="item-info">
+        <div class="item-tit">
+          <p>Bar chart</p>
+          <div class="btn-group">
+            <a href="#" class="btn basicBar">Basic Bar</a>
+            <a href="#" class="btn columnBar">Column Bar</a>
+            <a href="#" class="btn groupedBar">Grouped Bar</a>
+          </div>
+        </div>
+      </div>
+      <figure class="highcharts-figure">
+        <div class="chartContainer chartContainerBar" id="basicB"></div>
+        <p class="highcharts-description">
+          Bar chart showing horizontal columns. This chart type is often
+          beneficial for smaller screens, as the user can scroll through the data
+          vertically, and axis labels are easy to read.
+        </p>
+      </figure>
+    </div>
 
+
+</div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/11.0.1/highcharts.min.js"></script>
   <script src="./script.js"></script>
+  <script src="../menu.js"></script>
 </body>
 </html>
