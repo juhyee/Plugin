@@ -487,4 +487,323 @@ window.onload = function(){
 
     } barChart();
 
+
+
+
+    function pieChart() {
+        let basicPie = function drawChart() {
+            let basicP = new Highcharts.Chart({
+                chart: {
+                    renderTo: 'basicP',
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    plotShadow: false,
+                    type: 'pie'
+                },
+                title: {
+                    text: 'Browser market shares in May, 2020',
+                    align: 'left'
+                },
+                tooltip: {
+                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                },
+                accessibility: {
+                    point: {
+                        valueSuffix: '%'
+                    }
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: {
+                            enabled: true,
+                            format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                        }
+                    }
+                },
+                series: [{
+                    name: 'Brands',
+                    colorByPoint: true,
+                    data: [{
+                        name: 'Chrome',
+                        y: 70.67,
+                        sliced: true,
+                        selected: true
+                    }, {
+                        name: 'Edge',
+                        y: 14.77
+                    },  {
+                        name: 'Firefox',
+                        y: 4.86
+                    }, {
+                        name: 'Safari',
+                        y: 2.63
+                    }, {
+                        name: 'Internet Explorer',
+                        y: 1.53
+                    },  {
+                        name: 'Opera',
+                        y: 1.40
+                    }, {
+                        name: 'Sogou Explorer',
+                        y: 0.84
+                    }, {
+                        name: 'QQ',
+                        y: 0.51
+                    }, {
+                        name: 'Other',
+                        y: 2.6
+                    }]
+                }]
+            })
+        }
+        basicPie();  //default
+
+        let semiPie = function drawChart() {
+            let semiP = new Highcharts.Chart({
+                chart: {
+                    renderTo: 'semiP',
+                    plotBackgroundColor: null,
+                    plotBorderWidth: 0,
+                    plotShadow: false
+                },
+                title: {
+                    text: 'Browser<br>shares<br>January<br>2022',
+                    align: 'center',
+                    verticalAlign: 'middle',
+                    y: 60
+                },
+                tooltip: {
+                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                },
+                accessibility: {
+                    point: {
+                        valueSuffix: '%'
+                    }
+                },
+                plotOptions: {
+                    pie: {
+                        dataLabels: {
+                            enabled: true,
+                            distance: -50,
+                            style: {
+                                fontWeight: 'bold',
+                                color: 'white'
+                            }
+                        },
+                        startAngle: -90,
+                        endAngle: 90,
+                        center: ['50%', '75%'],
+                        size: '110%'
+                    }
+                },
+                series: [{
+                    type: 'pie',
+                    name: 'Browser share',
+                    innerSize: '50%',
+                    data: [
+                        ['Chrome', 73.86],
+                        ['Edge', 11.97],
+                        ['Firefox', 5.52],
+                        ['Safari', 2.98],
+                        ['Internet Explorer', 1.90],
+                        {
+                            name: 'Other',
+                            y: 3.77,
+                            dataLabels: {
+                                enabled: false
+                            }
+                        }
+                    ]
+                }]
+            })
+        }   
+
+        document.querySelector('.basicPie').addEventListener('click', function(e){
+            e.preventDefault();
+            document.querySelector('.chartContainerPie').id = 'basicP'
+            basicPie();
+        })
+        document.querySelector('.semiPie').addEventListener('click', function(e){
+            e.preventDefault();
+            document.querySelector('.chartContainerPie').id = 'semiP'
+            semiPie();
+        })
+    
+
+    } pieChart();
+    
+    function gaugechart () {
+        function renderIcons() {
+            // Move icon
+            if (!this.series[0].icon) {
+                this.series[0].icon = this.renderer.path(['M', -8, 0, 'L', 8, 0, 'M', 0, -8, 'L', 8, 0, 0, 8])
+                    .attr({
+                        stroke: '#303030',
+                        'stroke-linecap': 'round',
+                        'stroke-linejoin': 'round',
+                        'stroke-width': 2,
+                        zIndex: 10
+                    })
+                    .add(this.series[2].group);
+            }
+            this.series[0].icon.translate(
+                this.chartWidth / 2 - 10,
+                this.plotHeight / 2 - this.series[0].points[0].shapeArgs.innerR -
+                    (this.series[0].points[0].shapeArgs.r - this.series[0].points[0].shapeArgs.innerR) / 2
+            );
+        
+            // Exercise icon
+            if (!this.series[1].icon) {
+                this.series[1].icon = this.renderer.path(
+                    ['M', -8, 0, 'L', 8, 0, 'M', 0, -8, 'L', 8, 0, 0, 8,
+                        'M', 8, -8, 'L', 16, 0, 8, 8]
+                )
+                    .attr({
+                        stroke: '#ffffff',
+                        'stroke-linecap': 'round',
+                        'stroke-linejoin': 'round',
+                        'stroke-width': 2,
+                        zIndex: 10
+                    })
+                    .add(this.series[2].group);
+            }
+            this.series[1].icon.translate(
+                this.chartWidth / 2 - 10,
+                this.plotHeight / 2 - this.series[1].points[0].shapeArgs.innerR -
+                    (this.series[1].points[0].shapeArgs.r - this.series[1].points[0].shapeArgs.innerR) / 2
+            );
+        
+            // Stand icon
+            if (!this.series[2].icon) {
+                this.series[2].icon = this.renderer.path(['M', 0, 8, 'L', 0, -8, 'M', -8, 0, 'L', 0, -8, 8, 0])
+                    .attr({
+                        stroke: '#303030',
+                        'stroke-linecap': 'round',
+                        'stroke-linejoin': 'round',
+                        'stroke-width': 2,
+                        zIndex: 10
+                    })
+                    .add(this.series[2].group);
+            }
+        
+            this.series[2].icon.translate(
+                this.chartWidth / 2 - 10,
+                this.plotHeight / 2 - this.series[2].points[0].shapeArgs.innerR -
+                    (this.series[2].points[0].shapeArgs.r - this.series[2].points[0].shapeArgs.innerR) / 2
+            );
+        }
+
+        let chartGauge = function drawChart() {
+            let chartG = new Highcharts.Chart({
+                    chart: {
+                        renderTo: 'basicG',
+                        type: 'solidgauge',
+                        height: '110%',
+                        events: {
+                            render: renderIcons
+                        }
+                    },
+                
+                    title: {
+                        text: 'Activity',
+                        style: {
+                            fontSize: '24px'
+                        }
+                    },
+                
+                    tooltip: {
+                        borderWidth: 0,
+                        backgroundColor: 'none',
+                        shadow: false,
+                        style: {
+                            fontSize: '16px'
+                        },
+                        valueSuffix: '%',
+                        pointFormat: '{series.name}<br><span style="font-size:2em; color: {point.color}; font-weight: bold">{point.y}</span>',
+                        positioner: function (labelWidth) {
+                            return {
+                                x: (this.chart.chartWidth - labelWidth) / 2,
+                                y: (this.chart.plotHeight / 2) + 15
+                            };
+                        }
+                    },
+                
+                    pane: {
+                        startAngle: 0,
+                        endAngle: 360,
+                        background: [{ // Track for Move
+                            outerRadius: '112%',
+                            innerRadius: '88%',
+                            backgroundColor: Highcharts.color(Highcharts.getOptions().colors[0])
+                                .setOpacity(0.3)
+                                .get(),
+                            borderWidth: 0
+                        }, { // Track for Exercise
+                            outerRadius: '87%',
+                            innerRadius: '63%',
+                            backgroundColor: Highcharts.color(Highcharts.getOptions().colors[1])
+                                .setOpacity(0.3)
+                                .get(),
+                            borderWidth: 0
+                        }, { // Track for Stand
+                            outerRadius: '62%',
+                            innerRadius: '38%',
+                            backgroundColor: Highcharts.color(Highcharts.getOptions().colors[2])
+                                .setOpacity(0.3)
+                                .get(),
+                            borderWidth: 0
+                        }]
+                    },
+                
+                    yAxis: {
+                        min: 0,
+                        max: 100,
+                        lineWidth: 0,
+                        tickPositions: []
+                    },
+                
+                    plotOptions: {
+                        solidgauge: {
+                            dataLabels: {
+                                enabled: false
+                            },
+                            linecap: 'round',
+                            stickyTracking: false,
+                            rounded: true
+                        }
+                    },
+                
+                    series: [{
+                        name: 'Move',
+                        data: [{
+                            color: Highcharts.getOptions().colors[0],
+                            radius: '112%',
+                            innerRadius: '88%',
+                            y: 80
+                        }]
+                    }, {
+                        name: 'Exercise',
+                        data: [{
+                            color: Highcharts.getOptions().colors[1],
+                            radius: '87%',
+                            innerRadius: '63%',
+                            y: 65
+                        }]
+                    }, {
+                        name: 'Stand',
+                        data: [{
+                            color: Highcharts.getOptions().colors[2],
+                            radius: '62%',
+                            innerRadius: '38%',
+                            y: 50
+                        }]
+                    }]
+            
+            })
+        }
+        chartGauge();  //default
+    } gaugechart();
+    
 }

@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <title>highcharts_plugin</title>
-  <script src="../js/includeHTML.js"></script>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>highcharts_plugin</title>
+    <script src="../js/includeHTML.js"></script>
+    <script src="../menu.js"></script>
   <link rel="stylesheet" href="../reset.css">
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="../common.css">
@@ -78,11 +79,47 @@
       </figure>
     </div>
 
+    <div class="item" id="chartPie">
+      <div class="item-info">
+        <div class="item-tit">
+          <p>Pie chart</p>
+          <div class="btn-group">
+            <a href="#" class="btn basicPie">Basic Pie</a>
+            <a href="#" class="btn semiPie">Semi circle donut Pie</a>
+          </div>
+        </div>
+      </div>
+      <figure class="highcharts-figure">
+        <div class="chartContainer chartContainerPie" id="basicP"></div>
+        <p class="highcharts-description">
+          Pie charts are very popular for showing a compact overview of a
+        composition or comparison. While they can be harder to read than
+        column charts, they remain a popular choice for small datasets.
+        </p>
+      </figure>
+    </div>
 
+
+    <div class="item" id="chartGauge">
+      <div class="item-info">
+        <div class="item-tit">
+          <p>Gauge chart</p>
+        </div>
+      </div>
+      <figure class="highcharts-figure">
+        <div class="chartContainer chartContainerGauge" id="basicG"></div>
+        <p class="highcharts-description">
+          A chart showing multiple gauge series arcing around the center point,
+          similar to the activity chart found on the Apple Watch. Each gauge has a
+          custom icon, and the tooltip is positioned statically in the center.
+        </p>
+      </figure>
+    </div>
 </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/11.0.1/highcharts.min.js"></script>
-  <script src="./script.js"></script>
-  <script src="../menu.js"></script>
+<script src="./script.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
 </body>
 </html>
