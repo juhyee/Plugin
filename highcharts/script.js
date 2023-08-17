@@ -696,7 +696,7 @@ window.onload = function(){
         }
 
         let chartGauge = function drawChart() {
-            let chartG = new Highcharts.Chart({
+            let basicG = new Highcharts.Chart({
                     chart: {
                         renderTo: 'basicG',
                         type: 'solidgauge',
