@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AOS 라이브러리는 스크롤 움직임에 따라 개체의 움직임을 주는 애니메이션이다.">
+  <title>AOS_plugin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+  <script src="../js/includeHTML.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="../reset.css">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="../common.css">
+</head>
+  <body>
+
+
+    <!-- wrap -->
+    <aside include-html="../list.html" class="aside" id="aside"></aside>
+    <div class="wrap">
+
+      <h3 class="item-tit">FADE</h3>
+      <div class="aos aos_fade">
+        <div class="item_wrap">
+        <div class="item" data-aos="fade-up">test</div>
+        <div class="item" data-aos="fade-down">test</div>
+        <div class="item" data-aos="fade-right">test</div>
+        <div class="item" data-aos="fade-left">test</div>
+        <div class="item" data-aos="fade-up-right">test</div>
+        <div class="item" data-aos="fade-up-left">test</div>
+        <div class="item" data-aos="fade-down-right">test</div>
+        <div class="item" data-aos="fade-down-left">test</div>
+      </div>
+      </div>
+
+      <h3 class="item-tit">FLIP</h3>
+      <div class="aos aos_filp">
+        <div class="item_wrap">
+        <div class="item" data-aos="flip-left">test</div>
+        <div class="item" data-aos="flip-right">test</div>
+        <div class="item" data-aos="flip-up">test</div>
+        <div class="item" data-aos="flip-down">test</div>
+      </div>
+      </div>
+
+      <h3 class="item-tit">ZOOM</h3>
+      <div class="aos aos_zoom">
+        <div class="item_wrap">
+        <div class="item" data-aos="zoom-in">test</div>
+        <div class="item" data-aos="zoom-in-up">test</div>
+        <div class="item" data-aos="zoom-in-down">test</div>
+        <div class="item" data-aos="zoom-in-left">test</div>
+        <div class="item" data-aos="zoom-in-right">test</div>
+        <div class="item" data-aos="zoom-out">test</div>
+        <div class="item" data-aos="zoom-out-up">test</div>
+        <div class="item" data-aos="zoom-out-down">test</div>
+        <div class="item" data-aos="zoom-out-right">test</div>
+        <div class="item" data-aos="zoom-out-left">test</div>
+      </div>
+      </div>
+
+      <h3 class="item-tit">ZOOM</h3>
+      <div class="aos aos_zoom">
+        <div class="item_wrap">
+        <div class="item" data-aos="zoom-in">test</div>
+        <div class="item" data-aos="zoom-in-up">test</div>
+        <div class="item" data-aos="zoom-in-down">test</div>
+        <div class="item" data-aos="zoom-in-left">test</div>
+        <div class="item" data-aos="zoom-in-right">test</div>
+        <div class="item" data-aos="zoom-out">test</div>
+        <div class="item" data-aos="zoom-out-up">test</div>
+        <div class="item" data-aos="zoom-out-down">test</div>
+        <div class="item" data-aos="zoom-out-right">test</div>
+        <div class="item" data-aos="zoom-out-left">test</div>
+      </div>
+      </div>
+
+      <h3 class="item-tit">DIFFERENT SETTINGS EXAMPLES</h3>
+      <div class="aos aos_different">
+        <div class="item_wrap">
+        <div class="item" data-aos="fade-up" data-aos-duration="3000">test</div>
+        <div class="item" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">test</div>
+        <div class="item" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">test</div>
+        <div class="item" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="500">test</div>
+        <div class="item" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0">test</div>
+        <div class="item" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">test</div>
+      </div>
+      </div>
+
+
+      <h3 class="item-tit">ANCHOR PLACEMENT</h3>
+      <div class="aos aos_anchor">
+        <div class="item_wrap">
+        <div class="item" data-aos="fade-up" data-aos-anchor-placement="top-bottom">test</div>
+        <div class="item" data-aos="fade-up" data-aos-anchor-placement="center-bottom">test</div>
+        <div class="item" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">test</div>
+        <div class="item" data-aos="fade-up" data-aos-anchor-placement="top-center">test</div>
+        <div class="item" data-aos="fade-up" data-aos-anchor-placement="center-center">test</div>
+        <div class="item" data-aos="fade-up" data-aos-anchor-placement="bottom-center">test</div>
+      </div>
+      </div>
+    </div>
+    <!-- //wrap -->
+
+
+    <!-- https://inpa.tistory.com/entry/AOS-%F0%9F%93%9A-%EC%8A%A4%ED%81%AC%EB%A1%A4-%EC%95%A0%EB%8B%88%EB%A9%94%EC%9D%B4%EC%85%98-Animate-On-Scroll -->
+    <a href="#" class="popup_btn"><img src="../swiper/img/settingIcon.svg" alt=""></a>
+    <div class="popup_modal modal">
+      <div class="modal_wrap">
+        <div class="modal_contents">
+          <div class="modal_head">
+            <h3 class="item-tit">Fullpage 옵션 설정</h3>
+            <a class="close_btn">
+              <span class="close"></span>
+            </a>
+          </div>
+          <div class="modal_body">
+            <span>
+              <a href="https://megabogo.github.io/plugin/fullpage/lang/korean/">https://megabogo.github.io/plugin/fullpage/lang/korean/</a>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="filter"></div>
+    </div>
+
+    <!-- 아래는 선택사항입니다. css3:false 옵션을 쓰시면서 "linear", "swing" 또는 "easeInOutCubic" 대신 다른 전환(easing) 효과를 원하시는 경우에만 필요합니다. -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./scirpt.js"></script>
+    <script src="../menu.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+      });
+    </script>
+  </body>
+</html>
