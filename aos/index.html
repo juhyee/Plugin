@@ -121,79 +121,34 @@
           <div class="modal_body">
             <ul class="option_list">
               <li>
-                <p class="item_tit">슬라이드 사이 여백</p>
-                <p>spaceBetween:<span class="num">num</span></p>
+                <p class="item_tit"><span>data-aos</span>사용할 애니메이션 효과명</p>
               </li>
               <li>
-                <p class="item_tit">한 슬라이드에 보여줄 개수</p>
-                <p>slidesPerView:<span class="num">num</span></p>
+                <p class="item_tit"><span>data-aos-easing</span>애니메이션 시간흐름에 따른 속도설정 옵션(default: ease)</p>
               </li>
               <li>
-                <p class="item_tit">센터모드</p>
-                <p>centeredSlides:<span class="boolean">boolean</span></p>
+                <p class="item_tit"><span>data-aos-anchor</span>특정한 객체에 anchor를 설정하여,어떤 객체를 기준으로 애니메이션이 시작 될지를 설정</p>
+                
               </li>
               <li>
-                <p class="item_tit">자동슬라이드</p>
-                <p>autoplay: {<br>
-                  &nbsp;&nbsp;delay: (시간 설정),<span class="num">num</span> <br>
-                  &nbsp;&nbsp;disableOnInteraction: (스와이프 후 자동 재생)<span class="boolean">boolean</span><br>
-                  }
-                </p>
+                <p class="item_tit"><span>data-aos-delay</span>애니메이션 재생 대기시간 설정(default: 0)</p>
+               
               </li>
               <li>
-                <p class="item_tit">슬라이드 반복 여부</p>
-                <p>loop:<span class="boolean">boolean</span></p>
+                <p class="item_tit"><span>data-aos-offset</span>애니메이션 효과가 시작될 객체의 위치 설정</p>
+               
               </li>
               <li>
-                <p class="item_tit">loop 사용 시 마지막 슬라이드에서 다음 슬라이드가 보여지지 않는 현상 수정</p>
-                <p>loopAdditionalSlides:<span class="num">num</span></p>
+                <p class="item_tit"><span>data-aos-duration</span>애니메이션의 재생시간 설정(default: 400)</p>
+               
               </li>
               <li>
-                <p class="item_tit">요소의 개수를 슬라이드 하단에 나타내 주는 UI</p>
-                <p>pagination: {<br>
-                  &nbsp;&nbsp;el:(페이징 태그 클래스 설정), <span class="string">string</span> <br>
-                  &nbsp;&nbsp;clickable:(버튼 클릭 여부) <span class="boolean">boolean</span><br>
-                  &nbsp;&nbsp;type:, (버튼 모양 결정)<span class="string">string</span><br>
-                  }
-                </p>
+                <p class="item_tit"><span>data-aos-anchor-placement</span>애니메이션이 어느 위치에서부터 적용될지 설정(default: top-bottom)</p>
+                
               </li>
               <li>
-                <p class="item_tit">슬라이드 좌우 버튼</p>
-                <p>navigation: {<br>
-                  &nbsp;&nbsp;nextEl:(다음 버튼 클래스 설정), <span class="string">string</span> <br>
-                  &nbsp;&nbsp;prevEl:(이전 버튼 클래스 설정), <span class="string">string</span> <br>
-                  }
-                </p>
-              </li>
-              <li>
-                <p class="item_tit">슬라이드 넘길 때 위치 고정 여부</p>
-                <p>freeMode:<span class="boolean">boolean</span></p>
-              </li>
-              <li>
-                <p class="item_tit">현재 활성 슬라이드높이 맞게 높이조정</p>
-                <p>autoHeight:<span class="boolean">boolean</span></p>
-              </li>
-              <li>
-                <p class="item_tit">슬라이드 터치 저항 여부</p>
-                <p>resistance:<span class="boolean">boolean</span></p>
-              </li>
-              <li>
-                <p class="item_tit">버튼으로만 슬라이드 조작이 가능(false-스와이핑안됨)</p>
-                <p>allowTouchMove:<span class="boolean">boolean</span></p>
-              </li>
-              <li>
-                <p class="item_tit">슬라이드가 1개 일 때 pager, button 숨김 여부 설정</p>
-                <p>watchOverflow:<span class="boolean">boolean</span></p>
-              </li>
-              <li>
-                <p class="item_tit">슬라이드 시작 부분 여백</p>
-                <p>slidesOffsetBefore:<span class="num">num</span><br>
-                slidesOffsetAfter:<span class="num">num</span></p>
-              </li>
-              <li>
-                <p class="item_tit">스타일을 변경하거나(예: 숨기기/표시) 하위 요소를 수정(슬라이드 추가/제거)할 때마다 스위퍼가 업데이트(초기화)</p>
-                <p> observer:<span class="boolean">boolean</span><br>
-               slidesOffsetAfter:<span class="boolean">boolean</span></p>
+                <p class="item_tit"><span>data-aos-once</span>스크롤 할때마다 애니매이션이 재생될지를 설정 (default: true)이 값을 false로 하게되면, 스크롤을 위로 올렷다 다시 내릴때 애니메이션이 다시 재생되도록 할 수 있다.</p>
+              
               </li>
             </ul>
           </div>
